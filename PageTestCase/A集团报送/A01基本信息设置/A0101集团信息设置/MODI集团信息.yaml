@@ -1,0 +1,19 @@
+# 1.元素输入值：[1,定位元素的方法,定位元素所需参数,输入的值]
+# 2.点击：[2,定位元素的方法,定位元素所需参数]
+# 3.下拉选项操作：[3,定位元素的方法,定位元素所需参数,下拉选项VALUE]
+# 4.切换frame/iframe表单：[4,frame/iframe的属性值]
+# 5.切换默认表单：[5]
+# 6.切换窗口：[6,切换窗口的索引]
+# 7.接受弹出框：[7]
+# 8.弹出框输入值：[8,输入的值]
+# 9.执行JS语句：[9,JS语句]
+# 10.SQL语句
+# 每一行一个操作,以列表的形式存放,最后一行是查询数据的SQL语句。
+- [1,name,company,信托有限责任公司]
+- [1,name,company_jc,信托]
+- [1,name,company_id,JG01]
+- [1,name,coa_id,COA01]
+- [1,name,belong_corp,集团]
+- [2,name,btnSave]
+- [7]
+- SELECT COMPANY,COMPANY_JC,COMPANY_ID,COA_ID,BELONG_CORP FROM ICMSDATA..TSYSTEMINFO
