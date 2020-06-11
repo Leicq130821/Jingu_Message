@@ -7,11 +7,11 @@ def runmoudletestcase(moudle_id):
     # 建立数据库连接
     Global.setsql()
     # 获取项目根目录
-    current_path = os.path.dirname(os.path.dirname(__file__))
+    current_path = os.path.split(os.path.dirname(__file__))[0]
     # 获取浏览器与地址数据
-    browserdata = Global.getdata(current_path + r'/CreateTestCase/ConfigData/BROWSER_URL.yaml')
+    browserdata = Global.getdata(current_path + r'\CreateTestCase\ConfigData\BROWSER_URL.yaml')
     # 获取模块用例路径
-    moudle_dir = Global.getdata(current_path + r'/CreateTestCase/ConfigData/MOUDLE.yaml')[moudle_id]
+    moudle_dir = Global.getdata(current_path + r'\CreateTestCase\ConfigData\MOUDLE.yaml')[moudle_id]
     # 获取模块名称
     moudle_name = moudle_dir.split('/')[-1]
     for browser_url in browserdata:
@@ -23,7 +23,7 @@ def runmoudletestcase(moudle_id):
             # 添加用例
             suite=unittest.defaultTestLoader.discover(current_path+moudle_dir,pattern='*.py')
             # 定义报告文件名及存放路径
-            filename=current_path+r'\TestReport\MoudleTestCaseReport'+'\\%s'%browser_url[0]+'_%sReport_'%moudle_name+datetime.now().strftime('%Y年%m月%d日_%H点%M分%S秒')+'.html'
+            filename=current_path+r'\TestReport\MoudleTestCaseReport'+r'\%s'%browser_url[0]+'_%sReport_'%moudle_name+datetime.now().strftime('%Y年%m月%d日_%H点%M分%S秒')+'.html'
             with open(filename,'wb') as file:
                 runner=HTMLTestRunner(stream=file,title='%s执行%s'%(browser_url[0],moudle_name))
                 runner.run(suite)

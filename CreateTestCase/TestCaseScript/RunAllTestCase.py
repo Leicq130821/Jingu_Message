@@ -8,9 +8,9 @@ def runalltestcase():
         # 建立数据库连接
         Global.setsql()
         # 获取项目根目录
-        current_path = os.path.dirname(os.path.dirname(__file__))
+        current_path = os.path.split(os.path.dirname(__file__))[0]
         # 获取浏览器与地址数据
-        browserdata = Global.getdata(current_path + r'/CreateTestCase/ConfigData/BROWSER_URL.yaml')
+        browserdata = Global.getdata(current_path + r'\CreateTestCase\ConfigData\BROWSER_URL.yaml')
         for browser_url in browserdata:
         # 实例化浏览器并访问系统地址
             Global.setbrowser(browser_url[0],browser_url[1])

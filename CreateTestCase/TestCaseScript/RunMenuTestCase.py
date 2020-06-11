@@ -7,11 +7,11 @@ def runmenutestcase(menu_id):
     # 建立数据库连接
     Global.setsql()
     # 获取项目根目录
-    current_path = os.path.dirname(os.path.dirname(__file__))
+    current_path = os.path.split(os.path.dirname(__file__))[0]
     # 获取浏览器与地址数据
-    browserdata = Global.getdata(current_path + r'/CreateTestCase/ConfigData/BROWSER_URL.yaml')
+    browserdata = Global.getdata(current_path + r'\CreateTestCase\ConfigData\BROWSER_URL.yaml')
     # 获取菜单用例路径
-    menu_id_dir = Global.getdata(current_path + r'/CreateTestCase/ConfigData/MENU.yaml')[menu_id]
+    menu_id_dir = Global.getdata(current_path + r'\CreateTestCase\ConfigData\MENU.yaml')[menu_id]
     # 获取菜单名称
     menu_id_name = menu_id_dir.split('/')[-1]
     for browser_url in browserdata:
