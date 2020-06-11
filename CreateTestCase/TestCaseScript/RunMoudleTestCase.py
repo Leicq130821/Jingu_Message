@@ -7,7 +7,7 @@ def runmoudletestcase(moudle_id):
     # 建立数据库连接
     Global.setsql()
     # 获取项目根目录
-    current_path = os.path.split(os.path.dirname(__file__))[0]
+    current_path = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
     # 获取浏览器与地址数据
     browserdata = Global.getdata(current_path + r'\CreateTestCase\ConfigData\BROWSER_URL.yaml')
     # 获取模块用例路径
@@ -33,6 +33,6 @@ def runmoudletestcase(moudle_id):
             # 关闭浏览器
             Global.closebrowser()
             # 发送邮件
-            SendEmail.sendemail(filename)
+            #SendEmail.sendemail(filename)
     # 关闭数据库连接
     Global.closesql()

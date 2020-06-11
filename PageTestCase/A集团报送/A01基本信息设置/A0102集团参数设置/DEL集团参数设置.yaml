@@ -9,8 +9,9 @@
 # 9.执行JS语句：[9,JS语句]
 # 10.SQL语句
 # 每一行一个操作,以列表的形式存放,最后一行是查询数据的SQL语句。
-- [2,css selector,'input[value="5"]']
+- [2,css selector,'input[value="7"]']
 - [2,name,btnDelete]
 - [7]
+- [6,0]
 - [7]
-- SELECT 1 FROM ICMSDATA..TJITPARAM WHERE SERIAL_NO=5
+- SELECT COUNT(*) FROM ICMSDATA..TJITPARAM WHERE SERIAL_NO=7

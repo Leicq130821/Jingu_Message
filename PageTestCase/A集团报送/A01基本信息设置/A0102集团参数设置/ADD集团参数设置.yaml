@@ -11,7 +11,7 @@
 # 每一行一个操作,以列表的形式存放,最后一行是查询数据的SQL语句。
 - [2,name,btnNew]
 - [6,-1]
-- [1,name,type_id1,'9999']
+- [1,name,type_id,'9999']
 - [1,name,type_name,测试类别]
 - [1,name,type_value,'999901']
 - [1,name,type_content,类别一]

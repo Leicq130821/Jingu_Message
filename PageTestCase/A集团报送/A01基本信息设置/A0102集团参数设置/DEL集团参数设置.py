@@ -1,8 +1,8 @@
 from CreateTestCase.TestCaseScript import Global,GlobalTestCase,EnterMenu
 import unittest,os
 
-class ModiJTXX(unittest.TestCase):
-    def testModiJTXX(self):
+class DelJTXX(unittest.TestCase):
+    def testDelModiJTXX(self):
         # 路径信息
         current_path = os.path.dirname(__file__)
         datafilename = os.path.basename(__file__)[:-3]
@@ -15,7 +15,8 @@ class ModiJTXX(unittest.TestCase):
         # 执行用例并获取输入与输出值
         INPUTDATA,SQLDATA,RESULT,TEXT=GlobalTestCase.globaltestcase(*Data)
         if RESULT==1:
-            assert SQLDATA==1,'删除数据失败，请检查!'
+            print(TEXT)
+            assert SQLDATA!=[1],'删除数据失败，请检查!'
         elif RESULT ==2:
             assert False, '页面报错，请检查！：\n%s'%TEXT
         elif RESULT == 3:

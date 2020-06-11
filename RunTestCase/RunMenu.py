@@ -5,4 +5,4 @@ sys.path.append(rootPath)
 from CreateTestCase.TestCaseScript import RunMenuTestCase
 
 # 执行菜单用例，参数为菜单ID。
-RunMenuTestCase.runmenutestcase()
+RunMenuTestCase.runmenutestcase('A0101')

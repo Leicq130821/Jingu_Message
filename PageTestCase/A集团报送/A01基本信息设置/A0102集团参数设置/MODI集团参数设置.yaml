@@ -11,9 +11,9 @@
 # 每一行一个操作,以列表的形式存放,最后一行是查询数据的SQL语句。
 - [2,css selector,'button[onclick*="showInfo(1)"]']
 - [6,-1]
-#- [1,name,type_name,六级分类]
-- [1,name,type_value,'02']
-#- [1,name,type_content,新的一级]
+- [1,name,type_name,五级分类]
+- [1,name,type_value,01]
+- [1,name,type_content,正常]
 - [2,name,btnSave]
 - [6,0]
 - [7]

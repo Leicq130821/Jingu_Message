@@ -5,4 +5,4 @@ sys.path.append(rootPath)
 from CreateTestCase.TestCaseScript import RunOneTestCase
 
 # 具体执行某个用例，参数为文件名。
-RunOneTestCase.runonetestcase('MODI集团信息')
+RunOneTestCase.runonetestcase('DEL集团参数设置')

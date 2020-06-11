@@ -5,4 +5,4 @@ sys.path.append(rootPath)
 from CreateTestCase.TestCaseScript import RunMoudleTestCase
 
 # 执行模块用例，参数为模块ID。
-RunMoudleTestCase.runmoudletestcase()
+RunMoudleTestCase.runmoudletestcase('A')

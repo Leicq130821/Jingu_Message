@@ -18,7 +18,7 @@ class AddJTCSSZ(unittest.TestCase):
             print(TEXT)
             print('输入数据：',INPUTDATA)
             print('结果数据：',SQLDATA)
-            assert INPUTDATA!=SQLDATA,'输入的值与存入到数据库的值不一致，请检查!'
+            assert INPUTDATA==SQLDATA,'输入的值与存入到数据库的值不一致，请检查!'
         elif RESULT == 2:
             assert False, '页面报错，请检查！：\n%s'%TEXT
         elif RESULT == 3:
